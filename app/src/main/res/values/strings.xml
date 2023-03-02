@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ShowBox</string>
+    <string name="searchview">searchView</string>
+    <string name="user">User</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="popular_sifi_movie">Popular Si-Fi Movie</string>
+    <string name="thrillerMovie">Popular Thriller Movie</string>
+    <string name="StockMarketMovie">Trending Stock Market Movie</string>
+    <string name="ActionMovie">Popular Action Movie</string>
+</resources>

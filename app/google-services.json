@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "449160629541",
+    "project_id": "show-box-105c0",
+    "storage_bucket": "show-box-105c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449160629541:android:d43008e3519291cfdf9ecc",
+        "android_client_info": {
+          "package_name": "com.basetechz.showbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449160629541-cqu3ijbijqc0rdi80bcenqnkunsh9f25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzY1nfhhyNhDxSnQlgi4jWQDolcZE9WTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449160629541-cqu3ijbijqc0rdi80bcenqnkunsh9f25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

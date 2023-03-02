@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"/>
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="Store"/>
+    <item
+        android:id="@+id/download"
+        android:icon="@drawable/baseline_download_24"
+        android:title="Download"/>
+    <item
+        android:id="@+id/library"
+        android:icon="@drawable/baseline_video_library_24"
+        android:title="Library"/>
+
+
+</menu>
