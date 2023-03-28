@@ -8,4 +8,6 @@
     <string name="thrillerMovie">Popular Thriller Movie</string>
     <string name="StockMarketMovie">Trending Stock Market Movie</string>
     <string name="ActionMovie">Popular Action Movie</string>
+    <string name="slideImage">SlideImage</string>
+    <string name="todo">eo_rew</string>
 </resources>

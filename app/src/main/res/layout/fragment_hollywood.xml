@@ -6,13 +6,8 @@
     android:background="@color/appBg"
     tools:context=".A_HomeFragment.Fragments.D_Hollywood.Hollywood">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="HollyWood"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:textSize="@dimen/_30sdp"/>
-
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/hollywoodRecycler"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
 </FrameLayout>

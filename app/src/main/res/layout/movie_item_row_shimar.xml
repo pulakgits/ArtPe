@@ -20,8 +20,9 @@
         app:cardElevation="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_3sdp"
         app:cardBackgroundColor="@color/lightWhite">
+
         <ImageView
-            android:id="@+id/sifiPoster"
+            android:id="@+id/moviePoster"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </androidx.cardview.widget.CardView>

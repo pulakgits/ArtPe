@@ -6,13 +6,9 @@
     android:background="@color/appBg"
     tools:context=".A_HomeFragment.Fragments.C_Bollywood.Bollywood">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Bollywood Movie"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_30sdp"
-        android:gravity="center" />
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/bollywoodRecycler"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
 
 </FrameLayout>

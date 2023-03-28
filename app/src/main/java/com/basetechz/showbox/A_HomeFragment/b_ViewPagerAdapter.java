@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.basetechz.showbox.A_HomeFragment.Fragments.C_Bollywood.Bollywood;
 import com.basetechz.showbox.A_HomeFragment.Fragments.A_ForYou.ForYou;
 import com.basetechz.showbox.A_HomeFragment.Fragments.D_Hollywood.Hollywood;
-import com.basetechz.showbox.A_HomeFragment.Fragments.B_PanIndia.PanIndia;
+import com.basetechz.showbox.A_HomeFragment.Fragments.B_IndianFlim.IndianFilm;
 import com.basetechz.showbox.A_HomeFragment.Fragments.E_Series.Series;
 
 public class b_ViewPagerAdapter extends FragmentPagerAdapter {
@@ -24,7 +24,7 @@ public class b_ViewPagerAdapter extends FragmentPagerAdapter {
        if(position==0){
            return  new ForYou();
        } else if (position==1) {
-           return  new PanIndia();
+           return  new IndianFilm();
        } else if (position==2) {
            return new Bollywood();
        }else if(position==3) {

@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/appBg"
     tools:context=".A_HomeFragment.a_HomeFragment">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,9 +23,9 @@
                 app:tabGravity="fill"
                 app:tabMode="scrollable"
                 android:background="@color/appBg"
-                app:tabSelectedTextColor="@color/white"
-                app:tabRippleColor="@color/white"
-                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/pink"
+                app:tabRippleColor="@color/lightWhite"
+                app:tabIndicatorColor="@color/pink"
                 app:tabIndicatorHeight="@dimen/_2sdp"
                 app:tabIndicatorFullWidth="false"
                 app:tabTextColor="@color/grey"

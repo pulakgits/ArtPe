@@ -2,10 +2,23 @@ package com.basetechz.showbox.A_HomeFragment.Fragments.C_Bollywood;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.basetechz.showbox.E_Adapter.Recycler_Movie_Parent_Adapter;
 import com.basetechz.showbox.R;
+import com.basetechz.showbox.Vie.FirebaseViewModel;
+import com.basetechz.showbox.databinding.FragmentBollywoodBinding;
+import com.basetechz.showbox.models.parent_model;
+import com.google.firebase.database.DatabaseError;
+
+import java.util.List;
 
 public class Bollywood extends Fragment {
 
@@ -20,11 +33,35 @@ public class Bollywood extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
+    FragmentBollywoodBinding binding;
+    private Recycler_Movie_Parent_Adapter parentAdapter;
+    private FirebaseViewModel firebaseViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bollywood, container, false);
+        binding = FragmentBollywoodBinding.inflate(getLayoutInflater());
+        binding.bollywoodRecycler.setHasFixedSize(true);
+        binding.bollywoodRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        parentAdapter = new Recycler_Movie_Parent_Adapter(getContext());
+        binding.bollywoodRecycler.setAdapter(parentAdapter);
+        firebaseViewModel = new ViewModelProvider(this).get(FirebaseViewModel.class);
+        firebaseViewModel.setReference("IndianFilm");
+        firebaseViewModel.getAllData();
+        firebaseViewModel.getParentModelMutableLiveData().observe(getViewLifecycleOwner(), new Observer<List<parent_model>>() {
+            @Override
+            public void onChanged(List<parent_model> parentModelList) {
+                parentAdapter.setParentItemList(parentModelList);
+                parentAdapter.notifyDataSetChanged();
+            }
+        });
+        firebaseViewModel.getDatabaseErrorMutableLiveData().observe(getViewLifecycleOwner(), new Observer<DatabaseError>() {
+            @Override
+            public void onChanged(DatabaseError error) {
+                Toast.makeText(getContext(), error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return binding.getRoot();
     }
 }

@@ -7,10 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="appBg">#222434</color>
+    <color name="appBg">#151620</color>
+    <color name="appBg2.0">#1E202E</color>
     <color name="lightWhite">#8D8E92</color>
     <color name="lightnewBlue">#32484B</color>
     <color name="yellow">#C8B703</color>
-    <color name="grey">#8D8D8D</color>
-    <color name="pink">#F50057</color>
+    <color name="grey">#DAD7D7</color>
+    <color name="pink">#F50039</color>
 </resources>
