@@ -3,13 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cd"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_150sdp"
-        android:layout_margin="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:cardBackgroundColor="@color/lightWhite">
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/lightWhite"
+        app:cardCornerRadius="@dimen/_10sdp">
     </androidx.cardview.widget.CardView>
     <View
         android:layout_width="@dimen/_100sdp"
@@ -17,6 +21,4 @@
         android:layout_below="@+id/cd"
         android:layout_centerHorizontal="true"
         android:background="@color/lightWhite"/>
-
-
 </RelativeLayout>

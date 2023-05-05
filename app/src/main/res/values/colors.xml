@@ -10,8 +10,9 @@
     <color name="appBg">#151620</color>
     <color name="appBg2.0">#1E202E</color>
     <color name="lightWhite">#8D8E92</color>
-    <color name="lightnewBlue">#32484B</color>
     <color name="yellow">#C8B703</color>
+    <color name="lightYellow">#C8B703</color>
     <color name="grey">#DAD7D7</color>
     <color name="pink">#F50039</color>
+    <color name="orange">#FF3D00</color>
 </resources>

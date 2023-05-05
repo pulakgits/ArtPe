@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".A_HomeFragment.Fragments.A_ForYou.StockMoviePage">
+    tools:context=".A_HomeFragment.Inner_Fragments.A_ForYou.StockMoviePage">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

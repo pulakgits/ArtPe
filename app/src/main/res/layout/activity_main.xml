@@ -14,6 +14,7 @@
         android:gravity="center"
         android:layout_marginTop="@dimen/_5sdp"
         tools:ignore="UselessParent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,23 +37,40 @@
 
             </LinearLayout>
 
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_toLeftOf="@+id/iconCard"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_notifications_24"/>
+
             <androidx.cardview.widget.CardView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
+                android:id="@+id/iconCard"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
                 android:layout_alignParentEnd="true"
-                app:cardCornerRadius="@dimen/_150sdp"
+                app:cardCornerRadius="@dimen/_100sdp"
                 app:cardBackgroundColor="@color/appBg">
                 <ImageView
                     android:id="@+id/userIcon"
-                    android:layout_width="@dimen/_28sdp"
-                    android:layout_height="@dimen/_28sdp"
-                    android:background="@drawable/user_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:contentDescription="TODO" />
             </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar"
+        android:layout_above="@+id/bnView"/>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnView"
@@ -63,10 +81,5 @@
         android:elevation="@dimen/_15sdp"
         android:layout_alignParentBottom="true"
         android:background="@color/appBg"/>
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolBar"
-        android:layout_above="@+id/bnView"/>
+
 </RelativeLayout>

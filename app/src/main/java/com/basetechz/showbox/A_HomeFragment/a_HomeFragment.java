@@ -1,17 +1,15 @@
 package com.basetechz.showbox.A_HomeFragment;
 
-import android.app.FragmentManager;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.basetechz.showbox.F_Adapter.ViewPager.b_ViewPagerAdapter;
 import com.basetechz.showbox.databinding.FragmentHomeBinding;
-import com.google.android.material.tabs.TabLayout;
 
 public class a_HomeFragment extends Fragment {
 

@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.basetechz.showbox">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +16,31 @@
         android:theme="@style/Theme.ShowBox"
         tools:targetApi="31">
         <activity
-            android:name=".A_HomeFragment.Fragments.A_ForYou.MoviePage"
+            android:name=".H_Authentication.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".H_Authentication.UpdateProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".H_Authentication.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".H_Authentication.SignUpActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".G_Setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".E_Profile.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".A_HomeFragment.Inner_Fragments.A_ForYou.MoviePage"
             android:exported="false" />
         <activity
             android:name=".VideoActivity"
@@ -22,23 +49,14 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".a_MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-
         <meta-data
             android:name="com.google.android.gms.drive.com.basetechz.showbox"
             android:value="967943280847-962qrjj0dg2vobk48b93a4epm2u5im2n.apps.googleusercontent.com" />
-
     </application>
 
 </manifest>
