@@ -9,45 +9,28 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.basetechz.showbox.E_Adapter.Recycler_Movie_Parent_Adapter;
-import com.basetechz.showbox.Vie.FirebaseViewModel;
+import com.basetechz.showbox.F_Adapter.Recycler_Movie_Parent_Adapter;
+import com.basetechz.showbox.MVVMPaterns.ViewModel.FirebaseViewModel;
 import com.basetechz.showbox.databinding.ActivityVideoBinding;
 import com.basetechz.showbox.models.parent_model;
-import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.ProgressiveMediaExtractor;
 import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.ui.PlayerView;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DefaultDataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
-import com.google.android.exoplayer2.util.Util;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.drive.Drive;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.SimpleExoPlayer.Builder;
 
-import java.io.File;
 import java.util.List;
 
 public class VideoActivity extends AppCompatActivity {

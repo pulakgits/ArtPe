@@ -39,5 +39,4 @@ public class ImageSlider {
             slideTimer = null;
         }
     }
-
 }

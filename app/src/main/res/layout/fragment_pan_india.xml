@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appBg"
-    tools:context=".A_HomeFragment.Fragments.B_IndianFlim.IndianFilm">
+    tools:context=".A_HomeFragment.Inner_Fragments.B_IndianFlim.IndianFilm">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/panIndiaRecycler"

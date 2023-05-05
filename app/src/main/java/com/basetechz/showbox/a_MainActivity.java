@@ -1,7 +1,6 @@
 package com.basetechz.showbox;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -9,24 +8,29 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.basetechz.showbox.A_HomeFragment.a_HomeFragment;
 import com.basetechz.showbox.B_SearchFragment.SearchFragment;
-import com.basetechz.showbox.C_DownloadFragment.DownloadFragment;
 import com.basetechz.showbox.D_LibraryFragment.LibraryFragment;
+import com.basetechz.showbox.E_Profile.Profile;
+import com.basetechz.showbox.G_Setting.SettingActivity;
 import com.basetechz.showbox.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class a_MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -35,18 +39,21 @@ public class a_MainActivity extends AppCompatActivity {
     int searchTextColor;
     ImageView closeButton;
     String greeting;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        mAuth = FirebaseAuth.getInstance();
+        String currentUserId = mAuth.getCurrentUser().getUid();
+
         // Time zone
         TimeZone timeZone = TimeZone.getDefault();
         Calendar calendar = Calendar.getInstance(timeZone);
 
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
-
 
         if (hour >= 5 && hour < 12) {
             greeting = "Good morning";
@@ -56,6 +63,43 @@ public class a_MainActivity extends AppCompatActivity {
             greeting = "Good Evening";
         }
 
+        // user icon
+        binding.userIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(a_MainActivity.this, Profile.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        // profile name and image in profile layout
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUserId);
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot userSnapshot : snapshot.getChildren()){
+
+                    if(snapshot.exists()){
+                        String name = snapshot.child("name").getValue(String.class);
+                        String image = snapshot.child("image").getValue(String.class);
+
+                        if(image != null){
+                            Picasso.get().load(image).into(binding.userIcon);
+                        }else {
+                            Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+                        }
+                    }else{
+                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // bottom navigation items color & txt color set
         BottomNavigationView bottomNavigationView = findViewById(R.id.bnView);
@@ -79,16 +123,13 @@ public class a_MainActivity extends AppCompatActivity {
                     binding.toolTxt.setText(greeting);
                     loadFragment(new a_HomeFragment(),false);
                 } else if (id == R.id.search) {
-                    binding.toolBar.setVisibility(View.GONE);
-                    loadFragment(new SearchFragment(),false);
-                } else if (id== R.id.download) {
                     binding.toolBar.setVisibility(View.VISIBLE);
-                    binding.userIcon.setVisibility(View.GONE);
-                    binding.toolTxt.setText("Downloads");
-                    loadFragment(new DownloadFragment(),false);
+                    binding.userIcon.setVisibility(View.VISIBLE);
+                    binding.toolTxt.setText("Search");
+                    loadFragment(new SearchFragment(),false);
                 } else if (id==R.id.library) {
                     binding.toolBar.setVisibility(View.VISIBLE);
-                    binding.userIcon.setVisibility(View.GONE);
+                    binding.userIcon.setVisibility(View.VISIBLE);
                     binding.toolTxt.setText("Library");
                     loadFragment(new LibraryFragment(),false);
                 }
@@ -96,10 +137,7 @@ public class a_MainActivity extends AppCompatActivity {
             }
         });
         binding.bnView.setSelectedItemId(R.id.home);
-
-
     }
-
     private  void  loadFragment(Fragment fragment, boolean flag){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();

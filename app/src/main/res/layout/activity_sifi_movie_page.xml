@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".A_HomeFragment.Fragments.A_ForYou.MoviePage"
+    tools:context=".A_HomeFragment.Inner_Fragments.A_ForYou.MoviePage"
     android:background="@color/appBg">
     <RelativeLayout
         android:id="@+id/toolBar"
