@@ -15,11 +15,11 @@ import android.widget.Toast;
 
 import com.basetechz.showbox.F_Adapter.ChildAdapter;
 import com.basetechz.showbox.F_Adapter.Recycler_Movie_Parent_Adapter;
-import com.basetechz.showbox.GridSpacingItemDecoration;
+import com.basetechz.showbox.L_ItemDecoration.GridSpacingItemDecoration;
 import com.basetechz.showbox.R;
-import com.basetechz.showbox.MVVMPaterns.ViewModel.FirebaseViewModel;
+import com.basetechz.showbox.H_MVVMPaterns.ViewModel.FirebaseViewModel;
 import com.basetechz.showbox.databinding.FragmentSearchBinding;
-import com.basetechz.showbox.models.child_model;
+import com.basetechz.showbox.G_models.child_model;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

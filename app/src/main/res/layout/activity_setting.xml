@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".G_Setting.SettingActivity"
+    tools:context=".K_Setting.SettingActivity"
     android:background="@color/appBg">
 
    <androidx.appcompat.widget.Toolbar
@@ -37,17 +37,19 @@
                 android:id="@+id/profileEditCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#383E47"
+                app:cardBackgroundColor="@color/appBg2.0"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                app:cardElevation="@dimen/_15sdp">
+                app:cardElevation="@dimen/_15sdp"
+                android:background="?selectableItemBackground">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/_10sdp">
+                    android:padding="@dimen/_10sdp"
+                    android:background="?selectableItemBackground">
                     <androidx.cardview.widget.CardView
                         android:id="@+id/userIconCard"
                         android:layout_width="@dimen/_50sdp"
@@ -97,19 +99,21 @@
                 android:id="@+id/accountSettingCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#383E47"
+                app:cardBackgroundColor="@color/appBg2.0"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 app:cardElevation="@dimen/_15sdp"
-                android:layout_below="@+id/profileEditCardView">
+                android:layout_below="@+id/profileEditCardView"
+                android:background="?selectableItemBackground">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp">
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="?selectableItemBackground">
 
                     <RelativeLayout
                         android:id="@+id/accountSetting"
@@ -229,19 +233,21 @@
                 android:id="@+id/themeSettingCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#383E47"
+                app:cardBackgroundColor="@color/appBg2.0"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 app:cardElevation="@dimen/_15sdp"
-                android:layout_below="@+id/accountSettingCard">
+                android:layout_below="@+id/accountSettingCard"
+                android:background="?selectableItemBackground">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp">
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="?selectableItemBackground">
 
                     <RelativeLayout
                         android:id="@+id/appTheme"
@@ -304,19 +310,21 @@
                 android:id="@+id/helpCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#383E47"
+                app:cardBackgroundColor="@color/appBg2.0"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 app:cardElevation="@dimen/_15sdp"
-                android:layout_below="@+id/themeSettingCard">
+                android:layout_below="@+id/themeSettingCard"
+                android:background="?selectableItemBackground">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp">
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="?selectableItemBackground">
 
                     <RelativeLayout
                         android:id="@+id/contactUs"
@@ -326,7 +334,7 @@
                             android:id="@+id/cu_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/app_theme_icon"/>
+                            android:src="@drawable/contact_us"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -353,7 +361,7 @@
                             android:id="@+id/ru_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/language_icon"/>
+                            android:src="@drawable/rate_us"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -380,7 +388,7 @@
                             android:id="@+id/au_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/language_icon"/>
+                            android:src="@drawable/about_us"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -407,7 +415,7 @@
                             android:id="@+id/fU_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/language_icon"/>
+                            android:src="@drawable/follow_us"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -434,7 +442,7 @@
                             android:id="@+id/lp_img"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/language_icon"/>
+                            android:src="@drawable/legal_policies"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -459,19 +467,21 @@
                 android:id="@+id/logOutCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#383E47"
+                app:cardBackgroundColor="@color/appBg2.0"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 app:cardElevation="@dimen/_15sdp"
-                android:layout_below="@+id/helpCard">
+                android:layout_below="@+id/helpCard"
+                android:background="?selectableItemBackground">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp">
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="?selectableItemBackground">
 
                     <RelativeLayout
                         android:id="@+id/logoutLayout"

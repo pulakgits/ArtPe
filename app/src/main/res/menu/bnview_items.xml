@@ -13,5 +13,4 @@
         android:icon="@drawable/baseline_video_library_24"
         android:title="Library"/>
 
-
 </menu>

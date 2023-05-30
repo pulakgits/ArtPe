@@ -4,7 +4,8 @@
     package="com.basetechz.showbox">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
 
     <application
         android:allowBackup="true"
@@ -16,16 +17,19 @@
         android:theme="@style/Theme.ShowBox"
         tools:targetApi="31">
         <activity
-            android:name=".H_Authentication.EditProfileActivity"
+            android:name=".J_Profile.Followers_and_Following_Page.Followers_Following_Activity"
             android:exported="false" />
         <activity
-            android:name=".H_Authentication.UpdateProfileActivity"
+            android:name=".J_Profile.EditProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".H_Authentication.SignInActivity"
+            android:name=".E_Authentication.UpdateProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".H_Authentication.SignUpActivity"
+            android:name=".E_Authentication.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".E_Authentication.SignUpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,21 +38,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".G_Setting.SettingActivity"
+            android:name=".K_Setting.SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".E_Profile.Profile"
+            android:name=".J_Profile.Profile"
             android:exported="false" />
         <activity
-            android:name=".A_HomeFragment.Inner_Fragments.A_ForYou.MoviePage"
+            android:name=".I_Activity.MoviePage"
             android:exported="false" />
         <activity
-            android:name=".VideoActivity"
+            android:name=".I_Activity.VideoActivity"
             android:configChanges="orientation|screenSize|screenLayout"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
-            android:name=".a_MainActivity"
+            android:name=".A_HomeFragment.Main_Activity.a_MainActivity"
             android:exported="true" />
 
         <meta-data

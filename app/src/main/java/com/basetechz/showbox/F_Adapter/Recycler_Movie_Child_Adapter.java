@@ -11,9 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.basetechz.showbox.models.child_model;
+import com.basetechz.showbox.G_models.child_model;
 import com.basetechz.showbox.R;
-import com.basetechz.showbox.VideoActivity;
+import com.basetechz.showbox.I_Activity.VideoActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

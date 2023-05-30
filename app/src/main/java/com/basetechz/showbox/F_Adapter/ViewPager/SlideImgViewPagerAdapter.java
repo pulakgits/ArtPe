@@ -10,9 +10,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.basetechz.showbox.G_models.slideImgModel;
+import com.basetechz.showbox.I_Activity.VideoActivity;
 import com.basetechz.showbox.R;
-import com.basetechz.showbox.VideoActivity;
-import com.basetechz.showbox.models.slideImgModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

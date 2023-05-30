@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import com.basetechz.showbox.R;
-import com.basetechz.showbox.VideoActivity;
-import com.basetechz.showbox.models.child_model;
+import com.basetechz.showbox.I_Activity.VideoActivity;
+import com.basetechz.showbox.G_models.child_model;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;

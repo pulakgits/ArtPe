@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.basetechz.showbox.F_Adapter.ViewPager.b_ViewPagerAdapter;
 import com.basetechz.showbox.databinding.FragmentHomeBinding;
+import com.basetechz.showbox.*;
 
 public class a_HomeFragment extends Fragment {
 

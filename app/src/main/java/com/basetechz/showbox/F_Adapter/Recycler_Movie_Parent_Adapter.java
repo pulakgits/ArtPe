@@ -12,9 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.basetechz.showbox.A_HomeFragment.Inner_Fragments.A_ForYou.MoviePage;
+import com.basetechz.showbox.I_Activity.MoviePage;
 import com.basetechz.showbox.R;
-import com.basetechz.showbox.models.parent_model;
+import com.basetechz.showbox.G_models.parent_model;
 
 import java.util.List;
 
